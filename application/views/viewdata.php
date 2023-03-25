@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta charset="utf-8">
 	<title>Search Your data</title>
   <link rel="stylesheet" href=<?php echo  base_url('styles/bootstrap.css') ?>>
-	<link rel="stylesheet" href=<?php echo  base_url('styles/datatables.css') ?>>
+	<link rel="stylesheet" href="<?php echo  base_url() ?>styles/datatables.css">
 
 </head>
 <body>
@@ -15,6 +15,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <table class="table " id="viewtable">
   <thead>
     <tr>
+    <th scope="col">Sno</th>
+    <th scope="col">Date of Register</th>      
       <th scope="col">Region</th>
       <th scope="col">Chapter</th>
       <th scope="col">Training_program</th>
@@ -35,6 +37,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          foreach ($details as $detail) 
          {  
             ?><tr> 
+            <td><?php echo $detail['d_id'];?></td>
+            <td><?php echo $detail['date_of_register'];?></td>
             <td><?php echo $detail['region'];?></td>  
             <td><?php echo $detail['chapter'];?></td>  
             <td><?php echo $detail['t_program'];?></td>  
@@ -59,6 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script type='text/javascript' src="<?php echo base_url(); ?>scripts/jQuery_validate.js"></script>
 <script type='text/javascript' src="<?php echo base_url(); ?>scripts/ajax.js"></script>
 <script type='text/javascript' src="<?php echo base_url(); ?>scripts/datatables.js"></script>
+<script type='text/javascript' src="<?php echo base_url(); ?>scripts/datatable.min.js"></script>
 <script type='text/javascript' src="<?php echo base_url(); ?>scripts/script.js"></script>
 <script>
   $('#viewtable').DataTable();

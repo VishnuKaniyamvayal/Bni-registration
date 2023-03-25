@@ -7,6 +7,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->model('Get');
 		$data['regions'] = $this->Get->getRegion();
+		$this->load->view('header',$data);
 		$this->load->view('form',$data);
 	}
 }

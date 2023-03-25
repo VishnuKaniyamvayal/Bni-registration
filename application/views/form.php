@@ -23,24 +23,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-	<nav class="h-[90px] bg-[#CF2030] flex flex-row justify-between">
-		<div class="bg-white  w-[200px] ml-[130px] flex h-full flex items-center justify-center ">
-			<img class="h-[70px]" src="<?php echo  base_url('assets/logo.png') ?>" alt="">
-		</div>
-		<div>
-			<ul class="flex pr-[120px] pt-4">
-				<li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium" href="">HOME</a></li>
-				<li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium" href="">ABOUT</a></li>
-				<li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium" href="">SERVICE</a></li>
-				<li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium" href="">PROFILE</a></li>
-				<li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium" href="">MEMBER PAYMENT</a>
-				</li>
-				<li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium" href="">CONTACT</a></li>
-				<li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium" href="">LOGIN</a></li>
-			</ul>
-		</div>
-	</nav>
-
 	<div class="border-y-[1px]  mt-10 border-black w-[600px] mx-auto">
 		<h1 class="font-thin  text-center text-2xl font-bold">ALL TRAINING PAYMENTS</h1>
 	</div>
@@ -77,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="flex flex-row space-x-8 items-center justify-between pr-[10px]">
 					<label for="t_program">Training Program: </label>
 					<select class="form-select max-w-[300px]" id='t_program' name='t_program'>
-						<option selected value="regex">Select Training Program</option>
+						<option selected value="">Select Training Program</option>
 						<option value="1">Member_Success_Program</option>
 						<option value="2">Fincloud_and_ST</option>
 						<option value="3">Jubilant_coimbatore</option>
@@ -103,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="flex flex-row space-x-8 items-center justify-between px-[10px] mt-1 ">
 					<label for="gstn">GSTN No:</label>
 					<div class="flex flex-col mt-1">
-						<input type='text' class="form-control max-w-[300px] " id='gstn' name='gstn' />
+						<input type='text' class="form-control max-w-[300px] " id='gstn' name='gstn' readonly />
 						<p class="text-xs">If GSTN Number is not available. Please Enter <b>NILGST</b> </p>
 					</div>
 				</div>
@@ -112,11 +94,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class='grid grid-cols-2  mx-auto mt-10'>
 				<div class="flex flex-row space-x-8 items-center justify-between px-[10px]">
 					<label for="address">Address:</label>
-					<input type='text' class="form-control max-w-[300px]" id='address' name='address' />
+					<input type='text' readonly class="form-control max-w-[300px]" id='address' name='address' />
 				</div>
 				<div class="flex flex-row space-x-8 items-center justify-between px-[10px] ">
 					<label for="company">Company</label>
-					<input type='text' class="form-control max-w-[300px]" id='company' name='company' />
+					<input type='text' readonly class="form-control max-w-[300px]" id='company' name='company' />
 				</div>
 			</div>
 			<!-- 5th row -->

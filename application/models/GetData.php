@@ -44,6 +44,8 @@ class GetData extends CI_Model {
             $member = $temp[0]['name'];
 
             $venue = $data_member['venue'];
+            $d_id = $data_member['d_id'];
+            $date_of_register = $data_member['date_of_register'];
             $gstn = $data_member['gstn'];
             $address = $data_member['address'];
             $company = $data_member['company'];
@@ -52,7 +54,9 @@ class GetData extends CI_Model {
 
 
          $temp_array = array(
-			'region'=> $region,
+         'd_id'=> $d_id,
+         'date_of_register'=> $date_of_register,
+         'region'=> $region,
 			'chapter'=> $chapter,
 			't_program' => $t_program,
          'venue' => $venue,
