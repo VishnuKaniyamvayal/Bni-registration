@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation
+END
+Engineering.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation/Engineering.php
+END
+ExceptionHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation/ExceptionHandler.php
+END
+DateTime.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation/DateTime.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation/Exception.php
+END
+Database.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation/Database.php
+END
+LookupRef.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation/LookupRef.php
+END
+FormulaToken.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation/FormulaToken.php
+END
+Functions.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation/Functions.php
+END
+functionlist.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation/functionlist.txt
+END
+Logical.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation/Logical.php
+END
+TextData.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation/TextData.php
+END
+MathTrig.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation/MathTrig.php
+END
+FormulaParser.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation/FormulaParser.php
+END
+Statistical.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation/Statistical.php
+END
+Financial.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation/Financial.php
+END
+Function.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation/Function.php
+END

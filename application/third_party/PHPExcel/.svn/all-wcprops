@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel
+END
+RichText.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/RichText.php
+END
+DocumentProperties.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/DocumentProperties.php
+END
+HashTable.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/HashTable.php
+END
+ReferenceHelper.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/ReferenceHelper.php
+END
+Calculation.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Calculation.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Exception.php
+END
+IOFactory.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/IOFactory.php
+END
+Autoloader.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Autoloader.php
+END
+Style.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Style.php
+END
+Settings.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Settings.php
+END
+NamedRange.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/NamedRange.php
+END
+Chart.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Chart.php
+END
+Comment.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Comment.php
+END
+DocumentSecurity.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/DocumentSecurity.php
+END
+CachedObjectStorageFactory.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/CachedObjectStorageFactory.php
+END
+Worksheet.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Worksheet.php
+END
+IComparable.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/IComparable.php
+END
+Cell.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Cell.php
+END
+WorksheetIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/WorksheetIterator.php
+END

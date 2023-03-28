@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared
+END
+TimeZone.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/TimeZone.php
+END
+Drawing.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/Drawing.php
+END
+XMLWriter.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/XMLWriter.php
+END
+PasswordHasher.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/PasswordHasher.php
+END
+ZipArchive.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/ZipArchive.php
+END
+String.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/String.php
+END
+Font.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/Font.php
+END
+CodePage.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/CodePage.php
+END
+Escher.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/Escher.php
+END
+OLERead.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/OLERead.php
+END
+Date.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/Date.php
+END
+OLE.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/OLE.php
+END
+File.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/File.php
+END
+ZipStreamWrapper.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/ZipStreamWrapper.php
+END
+Excel5.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/Excel5.php
+END

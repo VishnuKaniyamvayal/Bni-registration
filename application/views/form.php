@@ -7,19 +7,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<meta charset="utf-8">
 	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FORTUNE BUSINESS SOLUTIONS</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FORTUNE BUSINESS SOLUTIONS</title>
+	<script src="https://cdn.tailwindcss.com"></script>
 	<style>
-	label.error {
-    color: red;
-    font-size: 14px;
-}
+		label.error {
+			color: red;
+			font-size: 14px;
+		}
 	</style>
-    <link rel="stylesheet" href=<?php echo  base_url('styles/style.css') ?>>
-    <link rel="stylesheet" href=<?php echo  base_url('styles/bootstrap.css') ?>>
-	<link rel="stylesheet" href=<?php echo  base_url('styles/datatables.css') ?>>
+	<link rel="stylesheet" href=<?php echo base_url('styles/style.css') ?>>
+	<link rel="stylesheet" href=<?php echo base_url('styles/bootstrap.css') ?>>
 </head>
 
 <body>
@@ -32,6 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class='grid grid-cols-2  mx-auto mt-10 '>
 				<div class="flex flex-row space-x-8 items-center justify-between px-[10px]">
 					<label for="region">BNI Region:</label>
+					<div class="flex flex-col mt-4 w-[300px]">
 					<select class="form-select max-w-[300px]" id='region' name='region'>
 						<option value="" selected>Select region</option>
 						<!-- Iterating Regions -->
@@ -46,18 +46,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       ?>
 						<!-- END of Iterating Regions -->
 					</select>
+					</div>
 				</div>
 				<div class="flex flex-row space-x-8 items-center justify-between px-[10px]">
 					<label for="chapter">BNI Chapter: </label>
+					<div class="flex flex-col mt-4 w-[300px]">
 					<select class="form-select max-w-[300px]" id="chapter" name='chapter'>
-						<option selected>Please select Chapter</option>
+						<option selected value="">Please select Chapter</option>
 					</select>
+					</div>
 				</div>
-				<!-- 2nd row -->
 			</div>
+			<!-- 2nd row -->
 			<div class='grid grid-cols-2  mx-auto mt-10 justify-between px-[10px]'>
 				<div class="flex flex-row space-x-8 items-center justify-between pr-[10px]">
 					<label for="t_program">Training Program: </label>
+					<div class="flex flex-col mt-4 w-[300px]">
 					<select class="form-select max-w-[300px]" id='t_program' name='t_program'>
 						<option selected value="">Select Training Program</option>
 						<option value="1">Member_Success_Program</option>
@@ -65,26 +69,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<option value="3">Jubilant_coimbatore</option>
 						<option value="4">LVH</option>
 					</select>
+					</div>
 				</div>
 
 				<div class="flex flex-row space-x-8 items-center justify-between px-[10px] mr-[-10px]">
 					<label id="venueL" for="venue">Venue</label>
+
 					<input readonly type='text' class="form-control max-w-[300px]" id='venue' name='venue' />
+
 				</div>
 
 
-				<!-- 3rd Row  -->
 			</div>
+			<!-- 3rd Row  -->
 			<div class='grid grid-cols-2  mx-auto mt-10'>
 				<div class="flex flex-row space-x-8 items-center justify-between px-[10px]">
 					<label for="member">Member Name </label>
+					<div class="flex flex-col mt-4 w-[300px]">
 					<select class="form-select max-w-[300px]" id="member" name='member'>
 						<option selected value="">Select Member</option>
 					</select>
+					</div>
+
 				</div>
 				<div class="flex flex-row space-x-8 items-center justify-between px-[10px] mt-1 ">
 					<label for="gstn">GSTN No:</label>
-					<div class="flex flex-col mt-1">
+					<div class="flex flex-col mt-4 w-[300px]">
 						<input type='text' class="form-control max-w-[300px] " id='gstn' name='gstn' readonly />
 						<p class="text-xs">If GSTN Number is not available. Please Enter <b>NILGST</b> </p>
 					</div>
@@ -94,27 +104,47 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class='grid grid-cols-2  mx-auto mt-10'>
 				<div class="flex flex-row space-x-8 items-center justify-between px-[10px]">
 					<label for="address">Address:</label>
+					<div class="flex flex-col mt-4 w-[300px]">
 					<input type='text' readonly class="form-control max-w-[300px]" id='address' name='address' />
+					</div>
 				</div>
 				<div class="flex flex-row space-x-8 items-center justify-between px-[10px] ">
 					<label for="company">Company</label>
+					<div class="flex flex-col mt-4 w-[300px]">
 					<input type='text' readonly class="form-control max-w-[300px]" id='company' name='company' />
+					</div>
 				</div>
 			</div>
+			<!-- 4th row -->
+			<!-- <div class='grid grid-cols-2  mx-auto mt-10'>
+				<div class="flex flex-row space-x-8 items-center justify-between px-[10px]">
+					<label for="email">Email:</label>
+					<div class="flex flex-col mt-4 w-[300px]">
+					<input type='text' readonly class="form-control max-w-[300px]" id='email' name='email' />
+					</div>
+				</div>
+				<div class="flex flex-row space-x-8 items-center justify-between px-[10px] ">
+					<label for="Phone">Phone</label>
+					<div class="flex flex-col mt-4 w-[300px]">
+					<input type='text' readonly class="form-control max-w-[300px]" id='Phone' name='Phone' />
+					</div>
+				</div>
+			</div> -->
 			<!-- 5th row -->
 			<div class='grid grid-cols-2  mx-auto mt-10'>
 				<div class="flex flex-row space-x-8 items-center justify-between px-[10px]">
 					<label for="total">Total to be paid<br>(GST included)</label>
-					<input readonly value="0.00" type='text' class="form-control max-w-[300px]" id='total'
-						name='total' />
+					<input readonly value="0.00" type='text' class="form-control max-w-[300px]" id='total' name='total' />
 				</div>
 				<div class="flex flex-row space-x-8 items-center justify-between px-[10px]">
 					<label for="payment">Payment type </label>
+					<div class="flex flex-col mt-4 w-[300px]">
 					<select class="form-select max-w-[300px]" id="payment" name='payment'>
 						<option selected value=''>Select Payment Type </option>
 						<option value="Credit_debit_netbanking">CREDIT / DEBIT / NETBANKING</option>
 						<option value="insta_mojo">Insta Mojo(Convenience fee applicable)</option>
 					</select>
+					</div>
 				</div>
 			</div>
 			<div class="flex justify-center mt-10 mb-[50px]">
@@ -126,7 +156,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </body>
 <script type='text/javascript' src="<?php echo base_url(); ?>scripts/jquery.js"></script>
 <script type='text/javascript' src="<?php echo base_url(); ?>scripts/jqueryvalidate.js"></script>
-<script type='text/javascript' src="<?php echo base_url(); ?>scripts/datatables.js"></script>
-<script type='text/javascript' src="<?php echo base_url(); ?>scripts/script.js"></script>
+<script type='text/javascript' src="<?php echo base_url(); ?>scripts/form_script.js"></script>
 
 </html>

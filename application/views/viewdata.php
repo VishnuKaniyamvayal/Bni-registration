@@ -8,9 +8,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title>Search Your data</title>
   <link rel="stylesheet" href=<?php echo  base_url('styles/bootstrap.css') ?>>
 	<link rel="stylesheet" href="<?php echo  base_url() ?>styles/datatables.css">
+  <script src="http://cdn.tailwindcss.com"></script>
 
 </head>
-<body>
+<body class='m-10'>
+<a href="<?php echo base_url(); ?>index.php/Exportdata"  class="text-white bg-[#CF2030] px-[15px] py-[8px] rounded float-right">Export</a>
 
 <table class="table " id="viewtable">
   <thead>
@@ -58,13 +60,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </tbody>
 </table>
 
+
+
 </body>
 <script type='text/javascript' src="<?php echo base_url(); ?>scripts/jQuery.js"></script>
 <script type='text/javascript' src="<?php echo base_url(); ?>scripts/jQuery_validate.js"></script>
 <script type='text/javascript' src="<?php echo base_url(); ?>scripts/ajax.js"></script>
 <script type='text/javascript' src="<?php echo base_url(); ?>scripts/datatables.js"></script>
 <script type='text/javascript' src="<?php echo base_url(); ?>scripts/datatable.min.js"></script>
-<script type='text/javascript' src="<?php echo base_url(); ?>scripts/script.js"></script>
 <script>
   $('#viewtable').DataTable();
 </script>

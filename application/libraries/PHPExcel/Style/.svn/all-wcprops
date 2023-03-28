@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Style
+END
+Border.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Style/Border.php
+END
+Alignment.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Style/Alignment.php
+END
+Color.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Style/Color.php
+END
+Borders.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Style/Borders.php
+END
+NumberFormat.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Style/NumberFormat.php
+END
+Supervisor.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Style/Supervisor.php
+END
+Conditional.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Style/Conditional.php
+END
+Fill.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Style/Fill.php
+END
+Font.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Style/Font.php
+END
+Protection.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Style/Protection.php
+END

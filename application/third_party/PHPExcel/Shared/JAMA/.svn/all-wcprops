@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/JAMA
+END
+LUDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/JAMA/LUDecomposition.php
+END
+CholeskyDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/JAMA/CholeskyDecomposition.php
+END
+SingularValueDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/JAMA/SingularValueDecomposition.php
+END
+CHANGELOG.TXT
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/JAMA/CHANGELOG.TXT
+END
+QRDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/JAMA/QRDecomposition.php
+END
+EigenvalueDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/JAMA/EigenvalueDecomposition.php
+END
+Matrix.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/coe/!svn/ver/3/application/third_party/PHPExcel/Shared/JAMA/Matrix.php
+END
