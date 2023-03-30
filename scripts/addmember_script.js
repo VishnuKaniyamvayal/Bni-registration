@@ -70,6 +70,8 @@ $(document).ready(function () {
                 phone: {
                     required: true,
                     number:true,
+                    maxlength:10,
+                    minlength:10,
                     remote: {
                         url:  base_url("index.php/Loadphone"),
                         type: "POST",

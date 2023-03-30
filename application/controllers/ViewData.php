@@ -8,6 +8,7 @@ class ViewData extends CI_Controller {
     $this->load->model('GetData');
     $reg_data['details'] = $this->GetData->getData();
     // print_r($reg_data);
+    $this->load->view('header');
     $this->load->view('viewdata',$reg_data);
     
 }

@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
@@ -14,46 +15,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body class=''>
-    <a href="<?php echo base_url(); ?>index.php/Exportdata"
+    <a href="<?php echo base_url(); ?>index.php/Exportmemberdata"
         class="text-white bg-[#CF2030] px-[15px] py-[8px] rounded float-right no-underline mt-9">Export</a>
     <div class='mt-5 mx-2'>
-        <table class="table " id="viewtable">
+        <table class="table" id="viewtable">
             <thead>
                 <tr>
                     <th scope="col">Sno</th>
-                    <th scope="col">Date of Register</th>
                     <th scope="col">Region</th>
                     <th scope="col">Chapter</th>
-                    <th scope="col">Training_program</th>
-                    <th scope="col">Venue</th>
-                    <th scope="col">Member Name</th>
+                    <th scope="col">Member_name</th>
                     <th scope="col">Gstn</th>
                     <th scope="col">Address</th>
                     <th scope="col">Company</th>
-                    <th scope="col">Total </th>
-                    <th scope="col">Payment</th>
+                    <th scope="col">email</th>
+                    <th scope="col">Phone</th>
 
                 </tr>
             </thead>
             <tbody>
 
 
-                <?php  
-         foreach ($details as $detail) 
-         {  
+                <?php 
+        $count = 0; 
+         foreach($details as $detail) 
+         {  $count+=1;
             ?><tr>
-                    <td><?php echo $detail['d_id'];?></td>
-                    <td><?php echo $detail['date_of_register'];?></td>
+                    <td><?php echo $count;?></td>
                     <td><?php echo $detail['region'];?></td>
                     <td><?php echo $detail['chapter'];?></td>
-                    <td><?php echo $detail['t_program'];?></td>
-                    <td><?php echo $detail['venue'];?></td>
-                    <td><?php echo $detail['member'];?></td>
+                    <td><?php echo $detail['name'];?></td>
                     <td><?php echo $detail['gstn'];?></td>
                     <td><?php echo $detail['address'];?></td>
                     <td><?php echo $detail['company'];?></td>
-                    <td><?php echo $detail['total'];?></td>
-                    <td><?php echo $detail['payment'];?></td>
+                    <td><?php echo $detail['email'];?></td>
+                    <td><?php echo $detail['phone'];?></td>
                     </td>
                 </tr>
                 <?php }  
