@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div>
             <ul class="flex pr-[120px] pt-4">
                 <li><a class="text-white no-underline mx-2 text-[15px] hover:font-medium" href="">HOME</a></li>
-                <li><a class="text-white no-underline mx-2 text-[15px] hover:font-medium" href="">ADD TRAINING</a></li>
+                <li><a class="text-white no-underline mx-2 text-[15px] hover:font-medium" href="<?php echo base_url('index.php/Addtraining')?>">ADD TRAINING</a></li>
                 <li><a class="text-white no-underline mx-2 text-[15px] hover:font-medium"
                         href=<?php echo base_url('index.php/Addmember')?>>ADD MEMBER</a></li>
                 <li><a class="text-white no-underline mx-2 text-[15px] hover:font-medium"

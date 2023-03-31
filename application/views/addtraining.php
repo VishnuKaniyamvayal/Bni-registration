@@ -28,78 +28,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="w-full flex justify-end mt-[-20px] mb-[-50px]">
         </div>
         <form action=<?php echo base_url("index.php/Registertraining")?> id="training_form" method="POST">
-            <input type="text" value='' name="array" id="array" hidden>
-            <div class='grid grid-cols-2  mx-auto mt-10 '>
-                <div class="flex flex-row space-x-8 items-center justify-between px-[10px]">
-                    <label for="region">BNI Region:</label>
-                    <div class="flex flex-col mt-4 w-[300px]">
-                        <select class="form-select max-w-[300px]" id='region' name='region'>
-                            <option value="" selected>Select region</option>
-                            <!-- Iterating Regions -->
-                            <?php 
-                     foreach ($regions as $region)  
-                    { ?>
-                            <option value="<?php echo $region['r_id'];?>">
-                                <?php echo $region['region'];?>
-                            </option>
-
-                            <?php }  
-                      ?>
-                        </select>
-                    </div>
-                </div>
-                <div class="flex flex-row space-x-8 items-center justify-between px-[10px]">
-                    <label for="chapter">BNI Chapter:</label>
-                    <div class="flex flex-col mt-4 w-[300px]">
-                        <select class="form-select max-w-[300px]" id="chapter" name='chapter'>
-                            <option selected value=''>Please select Chapter</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <!-- 2rd Row  -->
-            <div class='grid grid-cols-2  mx-auto mt-10'>
-                <div class="flex flex-row space-x-8 items-center justify-between px-[10px]">
-                    <label for="name">Member Name</label>
-                    <div class="flex flex-col mt-4 w-[300px]">
-                        <input type='text' class="form-control max-w-[300px]" id='name' name='name' />
-                    </div>
-                </div>
-                <div class="flex flex-row space-x-8 items-center justify-between px-[10px] mt-1 ">
-                    <label for="gstn">GSTN No:</label>
-                    <div class="flex flex-col mt-4 w-[300px]">
-                        <input type='text' class="form-control max-w-[300px] " id='gstn' name='gstn' />
-                        <p class="text-xs mt-1">If GSTN Number is not available. Please Enter <b>NILGST</b> </p>
-                    </div>
-                </div>
-            </div>
+                
             <!-- 3th row -->
             <div class='grid grid-cols-2  mx-auto mt-10'>
-                <div class="flex flex-row space-x-8 items-center justify-between px-[10px]">
-                    <label for="address">Address:</label>
+                <div class="flex flex-row space-x-8 items-center justify-between px-[10px] mt-10">
+                    <label for="t_program">Program name</label>
                     <div class="flex flex-col mt-4 w-[300px]">
-                        <input type='text' class="form-control max-w-[300px]" id='address' name='address' />
+                        <input type='text' class="form-control max-w-[300px]" id='t_program' name='t_program' />
                     </div>
                 </div>
-                <div class="flex flex-row space-x-8 items-center justify-between px-[10px] ">
-                    <label for="company">Company</label>
+                <div class="flex flex-row space-x-8 items-center justify-between px-[10px]  mt-10">
+                    <label for="total">Cost of Program:</label>
                     <div class="flex flex-col mt-4 w-[300px]">
-                        <input type='text' class="form-control max-w-[300px]" id='company' name='company' />
+                        <input type='text' class="form-control max-w-[300px]" id='total' name='total' />
                     </div>
                 </div>
             </div>
-            <!-- 4th row -->
             <div class='grid grid-cols-2  mx-auto mt-10'>
-                <div class="flex flex-row space-x-8 items-center justify-between px-[10px]">
-                    <label for="email">Email:</label>
+                <div class="flex flex-row space-x-8 items-center justify-between px-[10px] mt-10">
+                    <label for="venue">Venue</label>
                     <div class="flex flex-col mt-4 w-[300px]">
-                        <input type='text' class="form-control max-w-[300px]" id='email' name='email' />
-                    </div>
-                </div>
-                <div class="flex flex-row space-x-8 items-center justify-between px-[10px] ">
-                    <label for="phone">Phone:</label>
-                    <div class="flex flex-col mt-4 w-[300px]">
-                        <input type='text' class="form-control max-w-[300px]" id='phone' name='phone' />
+                        <input type='text' class="form-control max-w-[300px]" id='venue' name='venue' />
                     </div>
                 </div>
             </div>
@@ -119,6 +68,6 @@ function base_url(string) {
     return "<?php echo base_url(); ?>" + string;
 }
 </script>
-<script type='text/javascript' src="<?php echo base_url(); ?>scripts/addmember_script.js"></script>
+<script type='text/javascript' src="<?php echo base_url(); ?>scripts/addtraining_script.js"></script>
 
 </html>

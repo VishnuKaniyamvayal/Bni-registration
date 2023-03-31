@@ -6,10 +6,10 @@ class Addmember extends CI_Controller
 
 	public function index()
 	{
-		$this->load->model('Get');
+		$this->load->model('GetInitial');
 		// $this->load->model('LoadGstn');
 		// $gstn['gstn'] = array($this->LoadGstn->getGstn());
-		$data['regions'] = $this->Get->getRegion();
+		$data['initial'] = $this->GetInitial->getvalues();
 		// $data['merged_data'] = array_merge($gstn,$region);
 		if($this->session->userdata('user'))
 		{

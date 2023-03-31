@@ -58,7 +58,8 @@ $(document).ready(function () {
         var m_id = $("#member").val();
         $.ajax({
             type: 'POST',
-            url: base_url("index.php/Loadmemberdetails/index"), 
+            url: base_url("index.php/Loadmemberdetails/index"),
+            data : {m_id:m_id} ,
             success: function (response) {
                 var memberdetails = JSON.parse(response);
                 //  $('#member').empty();

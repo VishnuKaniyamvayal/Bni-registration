@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <option value="" selected>Select region</option>
                             <!-- Iterating Regions -->
                             <?php 
-                     foreach ($regions as $region)  
+                     foreach ($initial[0] as $region)  
                     { ?>
                             <option value="<?php echo $region['r_id'];?>">
                                 <?php echo $region['region'];?>
