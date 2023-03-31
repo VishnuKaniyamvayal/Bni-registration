@@ -20,18 +20,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div>
             <ul class="flex pr-[120px] pt-4">
-                <li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium" href="">HOME</a></li>
-                <li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium" href="">ABOUT</a></li>
-                <li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium"
+                <li><a class="text-white no-underline mx-2 text-[15px] hover:font-medium" href="">HOME</a></li>
+                <li><a class="text-white no-underline mx-2 text-[15px] hover:font-medium" href="">ADD TRAINING</a></li>
+                <li><a class="text-white no-underline mx-2 text-[15px] hover:font-medium"
                         href=<?php echo base_url('index.php/Addmember')?>>ADD MEMBER</a></li>
-                <li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium"
+                <li><a class="text-white no-underline mx-2 text-[15px] hover:font-medium"
                         href="<?php echo base_url('index.php/Loadmemberview')?>">VIEW MEMBERS</a></li>
-                <li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium"
+                <li><a class="text-white no-underline mx-2 text-[15px] hover:font-medium"
                         href="<?php echo base_url('index.php/Eventregister')?>">EVENT REGISTER</a>
                 </li>
-                <li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium"
+                <li><a class="text-white no-underline mx-2 text-[15px] hover:font-medium"
                         href="<?php echo base_url('index.php/Viewdata')?>"> EVENTS REGISTERED </a></li>
-                <li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium" href="<?php echo base_url('index.php/Logout')?>">LOGOUT</a></li>
+                <li><a class="text-white no-underline mx-2 text-[15px] hover:font-medium" href="<?php echo base_url('index.php/Logout')?>">LOGOUT</a></li>
             </ul>
         </div>
     </nav>

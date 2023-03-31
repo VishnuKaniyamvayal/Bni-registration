@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <option value="" selected>Select region</option>
                             <!-- Iterating Regions -->
                             <?php 
-                     foreach ($regions as $region)  
+                     foreach ($initial[0] as $region)  
                     { ?>
                             <option value="<?php echo $region['r_id'];?>">
                                 <?php echo $region['region'];?>
@@ -66,11 +66,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <label for="t_program">Training Program: </label>
                     <div class="flex flex-col mt-4 w-[300px]">
                         <select class="form-select max-w-[300px]" id='t_program' name='t_program'>
-                            <option selected value="">Select Training Program</option>
-                            <option value="1">Member_Success_Program</option>
-                            <option value="2">Fincloud_and_ST</option>
-                            <option value="3">Jubilant_coimbatore</option>
-                            <option value="4">LVH</option>
+                            <option value="" selected>Select training Program</option>
+                        <!-- Iterating Regions -->
+                        <?php 
+                     foreach ($initial[1] as $t_program)  
+                    { ?>
+                            <option value="<?php echo $t_program['t_id'];?>">
+                                <?php echo $t_program['t_program'];?>
+                            </option>
+
+                            <?php }  
+                      ?>
+                            <!-- END of Iterating Regions -->
                         </select>
                     </div>
                 </div>
@@ -159,7 +166,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 </body>
 <script type='text/javascript' src="<?php echo base_url(); ?>scripts/jquery.js"></script>
+<script type='text/javascript' src="<?php echo base_url(); ?>scripts/ajax.js"></script>
 <script type='text/javascript' src="<?php echo base_url(); ?>scripts/jqueryvalidate.js"></script>
+<script>
+function base_url(string) {
+    return "<?php echo base_url(); ?>" + string;
+}
+</script>
 <script type='text/javascript' src="<?php echo base_url(); ?>scripts/form_script.js"></script>
 
 </html>

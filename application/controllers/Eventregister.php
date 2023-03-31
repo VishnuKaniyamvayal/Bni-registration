@@ -5,8 +5,8 @@ class Eventregister extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->model('Get');
-		$data['regions'] = $this->Get->getRegion();
+		$this->load->model('GetInitial');
+		$data['initial'] = $this->GetInitial->getvalues();
 		if($this->session->userdata('user'))
 		{
 		$this->load->view('s_admin_header');
@@ -16,6 +16,7 @@ class Eventregister extends CI_Controller {
 		{
 			redirect(base_url());
 		}
+		// print_r($this->GetInitial->getvalues());
 		
 	}
 }

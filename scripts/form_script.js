@@ -3,27 +3,20 @@ $(document).ready(function () {
 
     $('#venue').hide();
     $('#venueL').hide();
-    $('#regionerror').hide();
-    $('#chaptererror').hide();
-    $('#t_programerror').hide();
-    $('#membererror').hide();
-    $('#paymenterror').hide();
-
 
 
 
     //ajax for getting chapters 
     $('#region').on('change', function () {
-        console.log('working');
         var r_id = $(this).val(); // get the r__id 
+        console.log('work')
         $.ajax({
             type: 'POST',
-            url: "index.php/Loadchapter/index", // Replace 'controller' with the name of your controller
+            url: base_url("index.php/Loadchapter/index"),
             data: { r_id: r_id },
             success: function (response) {
-                console.log(response)
                 var chapters = JSON.parse(response);
-                console.log(chapters);
+                console.log("work")
                 $('#chapter').empty();
                 $('#chapter').append('<option selected value="" >Please select Chapter</option>');
                 chapters.forEach(chapter => {
@@ -31,8 +24,13 @@ $(document).ready(function () {
                     $('#chapter').append(option);
 
                 });
+            
 
-            }
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status);
+                alert(thrownError);
+              }
         });
     });
 
@@ -41,11 +39,10 @@ $(document).ready(function () {
         var c_id = $("#chapter").val(); // get the r__id 
         $.ajax({
             type: 'POST',
-            url: "index.php/Loadmember/index", // Replace 'controller' with the name of your controller
+            url: base_url("index.php/Loadmember/index"), 
             data: { c_id: c_id },
             success: function (response) {
                 var members = JSON.parse(response);
-                console.log(members);
                 $('#member').empty();
                 $('#member').append('<option selected value="" >Please select Any member</option>');
                 members.forEach(member => {
@@ -61,8 +58,7 @@ $(document).ready(function () {
         var m_id = $("#member").val();
         $.ajax({
             type: 'POST',
-            url: "index.php/Loadmemberdetails/index", // Replace 'controller' with the name of your controller
-            data: { m_id: m_id },
+            url: base_url("index.php/Loadmemberdetails/index"), 
             success: function (response) {
                 var memberdetails = JSON.parse(response);
                 //  $('#member').empty();
@@ -80,16 +76,15 @@ $(document).ready(function () {
 
     //ajax for venue
     $('#t_program').on('change', function () {
-        console.log("working1")
         $("#venue").show();
         $("#venueL").show();
         var t_id = $("#t_program").val();
-        console.log(t_id)
         $.ajax({
             type: 'POST',
-            url: "index.php/Loadvenue/index", // Replace 'controller' with the name of your controller
+            url: base_url("index.php/Loadvenue/index"),
             data: { t_id: t_id },
             success: function (response) {
+                console.log("working")
                 var venue = JSON.parse(response);
                 $('#venue').val(venue[0].venue)
 
@@ -102,10 +97,9 @@ $(document).ready(function () {
         $("#venue").show();
         $("#venueL").show();
         var t_id = $("#t_program").val();
-        console.log("wroking2")
         $.ajax({
             type: 'POST',
-            url: "index.php/Loadtotal/index", // Replace 'controller' with the name of your controller
+            url: base_url("index.php/Loadtotal/index"), 
             data: { t_id: t_id },
             success: function (response) {
                 var total = JSON.parse(response);
