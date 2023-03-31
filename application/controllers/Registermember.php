@@ -13,9 +13,12 @@ class Registermember extends CI_Controller {
 			'gstn' => $this->input->post('gstn'),
 			'address' => $this->input->post('address'),
 			'company' => $this->input->post('company'),
+            'email' => $this->input->post('email'),
+            'phone' => $this->input->post('phone'),
 		);
 		 $this->load->model('MemberRegister');
 		 $this->MemberRegister->memberReg($data);
+         redirect(base_url('index.php/Uploadsuccess'));
     }
 
 	public function upload()
@@ -27,15 +30,19 @@ class Registermember extends CI_Controller {
             $this->load->library('excel');
             
             $inputFileName = $file;
-                
+            $no_file_error  = array();
             //  Read your Excel workbook
             try {
                 $inputFileType = PHPExcel_IOFactory::identify($inputFileName);
                 $objReader = PHPExcel_IOFactory::createReader($inputFileType);
                 $objPHPExcel = $objReader->load($inputFileName);
             } catch(Exception $e) {
-
-                die('Error loading file "'.pathinfo($inputFileName,PATHINFO_BASENAME).'": '.$e->getMessage());
+               
+               $loaderror = ('Select Any excel file |'.pathinfo($inputFileName,PATHINFO_BASENAME).'": '.$e->getMessage());
+               array_push($no_file_error,$loaderror);
+               $this->session->set_flashdata('msg', $no_file_error);
+               redirect(base_url('index.php/Addmember/upload'));   
+                 
             }
             // creating an array for storing structure error messages
             $structure_error_array = array();
@@ -43,41 +50,41 @@ class Registermember extends CI_Controller {
             //  Get worksheet dimensions
             $sheet = $objPHPExcel->getSheet(0);
             $n=$sheet->getHighestRow(); 
-            $errorflag = FALSE;
+            $uploaderrorflag = FALSE;
                 
 
             $upload_format = array('region','chapter','name','gstn','address','company','email','phone');
 
             if($upload_format[0] != $sheet->getCell('A1')->getValue()){
-                $errorflag = TRUE;
+                $uploaderrorflag = TRUE;
                 array_push($structure_error_array,'(A1) name not matching with import format<br>') ;
             }
             if($upload_format[1] != $sheet->getCell('B1')->getValue()){
-                $errorflag = TRUE;
+                $uploaderrorflag = TRUE;
                 array_push($structure_error_array,'(B1) name not matching with import format<br>') ;
             }
             if($upload_format[2] != $sheet->getCell('C1')->getValue()){
-                $errorflag = TRUE;
+                $uploaderrorflag = TRUE;
                 array_push($structure_error_array,'(C1) name not matching with import format<br>') ;
             }
             if($upload_format[3] != $sheet->getCell('D1')->getValue()){
-                $errorflag = TRUE;
+                $uploaderrorflag = TRUE;
                 array_push($structure_error_array,'(D1) name not matching with import format<br>') ;
             }
 			if($upload_format[4] != $sheet->getCell('E1')->getValue()){
-                $errorflag = TRUE;
+                $uploaderrorflag = TRUE;
                 array_push($structure_error_array,'(E1) name not matching with import format<br>') ;
             }
 			if($upload_format[5] != $sheet->getCell('F1')->getValue()){
-                $errorflag = TRUE;
+                $uploaderrorflag = TRUE;
                 array_push($structure_error_array,'(F1) name not matching with import format<br>') ;
             }
 			if($upload_format[6] != $sheet->getCell('G1')->getValue()){
-                $errorflag = TRUE;
+                $uploaderrorflag = TRUE;
                 array_push($structure_error_array,'(G1) name not matching with import format<br>') ;
             }
 			if($upload_format[7] != $sheet->getCell('H1')->getValue()){
-                $errorflag = TRUE;
+                $uploaderrorflag = TRUE;
                 array_push($structure_error_array,'(H1) name not matching with import format<br>') ;
             }
             
@@ -113,7 +120,7 @@ class Registermember extends CI_Controller {
                     $this->load->model('CleanExcel');
                     $this->load->model('CheckAndReturn');                
                     $chapter_cleaned = $this->CleanExcel->cleanCasing($chapter);
-                    $chapter_checked = $this->CheckAndReturn->chapter($chapter,$region);
+                    $chapter_checked = $this->CheckAndReturn->chapter($chapter_cleaned,$region_cleaned);
                     if($chapter_checked == 'CHAPTERNOTFOUND')
                     {
                        $errorflag = TRUE;
@@ -122,7 +129,7 @@ class Registermember extends CI_Controller {
                     elseif($chapter_checked == 'NOTMATCHINGERROR')
                     {
                        $errorflag = TRUE;
-                       array_push($cell_error,('The given chapter is not available in '.$region.' error in cell B'.$i));   
+                       array_push($cell_error,('The given chapter is not available in '.$region.' Error in cell B'.$i));   
                     }
                     elseif($chapter == '')
                     {
@@ -131,7 +138,7 @@ class Registermember extends CI_Controller {
                     }
                     else
                     {
-                        $row['c_id'] = $chapter_checked;
+                        $row['c_id'] = (int)$chapter_checked;
                     }
                 //cleaning and inserting name
                 $name = trim($sheet->getCell('C' . $i)->getValue());
@@ -153,7 +160,7 @@ class Registermember extends CI_Controller {
                     if(!(empty($gstnexists)))
                     {
                        $errorflag = TRUE;
-                       array_push($cell_error,('Gstn alearady exists , error in cell D'.$i));
+                       array_push($cell_error,('Gstn alearady exists  Error in cell D'.$i));
                     }
                     elseif($gstn == '')
                     {
@@ -208,7 +215,7 @@ class Registermember extends CI_Controller {
                     elseif(!empty($email_checked))
                     {
                         $errorflag = TRUE;
-                        array_push($cell_error,('Email id already exists Error in cell G'.$i)); 
+                        array_push($cell_error,('Email id already Exists Error in cell G'.$i)); 
                     }
                     else
                     {
@@ -242,8 +249,13 @@ class Registermember extends CI_Controller {
                         $row['phone'] = $phone;
                     }
 				$rows[]=$row;
-            }
-                if($errorflag)
+                }   
+                if( $uploaderrorflag )
+                {
+                    $this->session->set_flashdata('msg', $structure_error_array);
+                    redirect(base_url('index.php/Addmember/upload')); 
+                }
+                elseif($errorflag)
                 {
                     $this->session->set_flashdata('msg', $cell_error);
                     redirect(base_url('index.php/Addmember/upload'));                    
@@ -251,6 +263,7 @@ class Registermember extends CI_Controller {
                 
                 else
                 {
+                    // print_r($rows);
                     foreach($rows as $cols){
                         $this->load->model('MemberRegister');
                         $this->MemberRegister->memberReg($cols);
@@ -259,6 +272,14 @@ class Registermember extends CI_Controller {
                     
                 }
     }       
+
+    // public function test()
+	// {   $this->load->model('CheckAndReturn');
+    //     $chapter = "crate";
+    //     $region = "ruralcoimbatore";
+    //     $chapter_checked = $this->CheckAndReturn->chapter($chapter,$region);
+    //     echo gettype((int)$chapter_checked);
+    // }
 	
 
 	}

@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="w-[70%] mx-auto  border rounded-md border-gray-100">
         <a class="no-underline text-white bg-[#CF2030] px-[15px] py-[8px] rounded m-7 float-right"
-            href="<?php echo base_url(" assets/add_member_template.xlsx")?>">Download template</a>
+            href="<?php echo base_url("assets/add_member_template.xlsx")?>" download="add_member_template.xlsx">Download template</a>
         <form enctype='multipart/form-data' action=<?php echo base_url("index.php/Registermember/upload")?>
             id="add_form" method="POST">
             <div class=" w-[300px] m-8">

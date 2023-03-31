@@ -11,13 +11,20 @@ class Addmember extends CI_Controller
 		// $gstn['gstn'] = array($this->LoadGstn->getGstn());
 		$data['regions'] = $this->Get->getRegion();
 		// $data['merged_data'] = array_merge($gstn,$region);
-		$this->load->view('header');
+		if($this->session->userdata('user'))
+		{
+		$this->load->view('s_admin_header');
 		$this->load->view('addmember', $data);
+		}
+		else
+		{	
+			redirect(base_url());
+		}
 		//print_r($data);
 	}
 	public function upload()
 	{
-		$this->load->view('header');
+		$this->load->view('s_admin_header');
 		$this->load->view('fileupload');
 	}
 }

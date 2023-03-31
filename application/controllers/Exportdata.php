@@ -46,7 +46,7 @@ class Exportdata extends CI_Controller {
     }
 	date_default_timezone_set("Asia/Jakarta");
     $this_date = date("Y-m-d");
-    $file_name = "Training report".$this_date.".xlsx";
+    $file_name = "Event details".$this_date.".xlsx";
 	$object_writer = PHPExcel_IOFactory::createWriter($object, 'Excel2007');
 	ob_end_clean();
 	header('Content-Type: application/vnd.ms-excel');

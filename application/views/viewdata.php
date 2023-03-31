@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body class=''>
     <a href="<?php echo base_url(); ?>index.php/Exportdata"
-        class="text-white bg-[#CF2030] px-[15px] py-[8px] rounded float-right no-underline mt-9">Export</a>
+        class="text-white bg-[#CF2030] px-[15px] py-[8px] rounded float-right no-underline mt-9" >Export</a>
     <div class='mt-5 mx-2'>
         <table class="table " id="viewtable">
             <thead>

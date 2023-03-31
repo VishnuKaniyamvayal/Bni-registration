@@ -23,15 +23,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium" href="">HOME</a></li>
                 <li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium" href="">ABOUT</a></li>
                 <li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium"
-                        href=<?php echo base_url('index.php/Addmember')?>>ADD MEMBER</a></li>
+                        href=<?php echo base_url('index.php/Addmember')?>>SERVICES</a></li>
                 <li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium"
-                        href="<?php echo base_url('index.php/Loadmemberview')?>">VIEW MEMBERS</a></li>
-                <li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium"
-                        href="<?php echo base_url()?>">MEMBER PAYMENT</a>
-                </li>
-                <li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium"
-                        href="<?php echo base_url('index.php/Viewdata')?>"> EVENTS REGISTERED </a></li>
-                <li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium" href="">LOGIN</a></li>
+                        href="<?php echo base_url('index.php/Loadmemberview')?>">CONTACT</a></li>
+                <li><a class="text-white no-underline mx-2 text-[18px] hover:font-medium" href='<?php echo base_url('index.php/Login')?>'>LOGIN</a></li>
             </ul>
         </div>
     </nav>
