@@ -7,9 +7,21 @@ class Welcome extends CI_Controller {
 	
 	{
 		if($this->session->userdata('user'))
-		{
+		{	if($this->session->userdata('user')['usertype'] == 's_admin')
+			{
 			$this->load->view('s_admin_header');
 			$this->load->view('home');
+			}
+			elseif($this->session->userdata('user')['usertype'] == 'admin')
+			{
+			$this->load->view('admin_header');
+			$this->load->view('home');
+			}
+			elseif($this->session->userdata('user')['usertype'] == 'member')
+			{
+			$this->load->view('member_header');
+			$this->load->view('home');
+			}
 		}
 		else
 		{

@@ -8,8 +8,16 @@ class Addtraining extends CI_Controller
 	{
 		if($this->session->userdata('user'))
 		{
-		$this->load->view('s_admin_header');
-		$this->load->view('addtraining');
+			if($this->session->userdata('user')['usertype'] == 's_admin')
+			{
+			$this->load->view('s_admin_header');
+			$this->load->view('addtraining');
+			}
+			elseif($this->session->userdata('user')['usertype'] == 'admin')
+			{
+			$this->load->view('admin_header');
+			$this->load->view('addtraining');
+			}
 		}
 		else
 		{	

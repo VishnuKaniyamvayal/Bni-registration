@@ -7,9 +7,9 @@ class Eventregister extends CI_Controller {
 	{
 		$this->load->model('GetInitial');
 		$data['initial'] = $this->GetInitial->getvalues();
-		if($this->session->userdata('user'))
+		if($this->session->userdata('user')['usertype'] == 'member' && $this->session->userdata('user')['m_id'] != NULL)
 		{
-		$this->load->view('s_admin_header');
+		$this->load->view('member_header');
 		$this->load->view('form',$data);
 		}
 		else

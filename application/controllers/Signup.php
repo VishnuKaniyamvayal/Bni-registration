@@ -11,8 +11,9 @@ class Signup extends CI_Controller {
     {   $username = $this->input->post('username');
         $email = $this->input->post('email');
         $password = $this->input->post('password');
+        $phone = $this->input->post('phone');
         $this->load->model('SignUpModel');
-        $created = $this->SignUpModel->userSignup($email,$password,$username);
+        $created = $this->SignUpModel->userSignup($email,$password,$username,$phone);
         if($created)
         {
             $this->load->model('LoginModel');
@@ -23,6 +24,7 @@ class Signup extends CI_Controller {
                 'usertype'=>$user['usertype'],
                 'username'=>$user['username'],
                 'email'=>$user['email'],
+                'phone'=>$user['phone'],
 
             );
             $this->session->set_userdata('user',$userdata);

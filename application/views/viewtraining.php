@@ -22,14 +22,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <thead>
                 <tr>
                     <th scope="col">Sno</th>
-                    <th scope="col">Region</th>
-                    <th scope="col">Chapter</th>
-                    <th scope="col">Member_name</th>
-                    <th scope="col">Gstn</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Company</th>
-                    <th scope="col">email</th>
-                    <th scope="col">Phone</th>
+                    <th scope="col">Program</th>
+                    <th scope="col">Venue</th>
+                    <th scope="col">Total</th>
 
                 </tr>
             </thead>
@@ -39,15 +34,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php 
         $count = 0; 
          foreach($details as $detail) 
-         {  $count+=1;
+         {  
             ?><tr>
                     <td><?php echo $count;?></td>
                     <td><?php echo $detail['t_program'];?></td>
-                    <td><?php echo $detail[''];?></td>
-                    <td><?php echo $detail['Program Name'];?></td>
+                    <td><?php echo $detail['venue'];?></td>
+                    <td><?php echo $detail['total'];?></td>
                     </td>
                 </tr>
-                <?php }  
+                <?php
+                $count+=1; }  
          ?>
 
 

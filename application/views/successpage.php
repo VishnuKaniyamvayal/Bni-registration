@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <a href=<?php echo base_url('index.php/Loadmemberview');?>
             class="text-white bg-[#CF2030] px-[15px] py-[8px] rounded float-right no-underline mt-9">View All
             members</a>
-        <a href=<?php echo base_url('index.php/Addmember');?>
+        <a href=<?php echo base_url();?>
             class="text-white bg-[#CF2030] px-[15px] py-[8px] rounded float-right no-underline mt-9">Add more</a>
     </div>
 </body>

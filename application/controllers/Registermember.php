@@ -17,8 +17,14 @@ class Registermember extends CI_Controller {
             'phone' => $this->input->post('phone'),
 		);
 		 $this->load->model('MemberRegister');
-		 $this->MemberRegister->memberReg($data);
-         redirect(base_url('index.php/Uploadsuccess'));
+		$data = $this->MemberRegister->memberReg($data);
+        $m_id = array('m_id'=> $data[0]['m_id']);
+        $u_id = $this->input->post('u_id');
+        $this->db->where('u_id', $u_id);
+        $this->db->update('users', $m_id);
+        
+
+          redirect(base_url('index.php/Uploadsuccess'));
     }
 
 	public function upload()

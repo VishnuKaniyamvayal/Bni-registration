@@ -26,6 +26,7 @@ class Login extends CI_Controller {
                 'usertype' => $user['usertype'],
                 'username' => $user['username'],
                 'email' => $user['email'],
+                'phone' => $user['phone'],
                 );
             $this->session->set_userdata('user',$userdata);
             redirect(base_url());

@@ -34,6 +34,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <input type="email" id="email" class="form-control max-w-[300px]" name='email'/>
                     </div>
                     <div class="form-outline ">
+                        <label class="form-label" for="email">Phone Number</label>
+                        <input type="text" id="phone" class="form-control max-w-[300px]" name='phone'/>
+                    </div>
+                    <div class="form-outline ">
                         <label class="form-label" for="password">Password</label>
                         <input type="password" id="password" class="form-control max-w-[300px]" name='password'/>
                     </div>

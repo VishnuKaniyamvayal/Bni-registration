@@ -20,10 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <h1 class="success-message">Data Uploaded</h1>
     </div>
-    <div class="items-center  flex  justify-center space-x-5">
-        <a href=<?php echo base_url('index.php/Loadtrainingview');?>
-            class="text-white bg-[#CF2030] px-[15px] py-[8px] rounded float-right no-underline mt-9">View All
-            members</a>
+    <div class="items-center  flex  justify-center">
         <a href=<?php echo base_url('index.php/Addtraining');?>
             class="text-white bg-[#CF2030] px-[15px] py-[8px] rounded float-right no-underline mt-9">Add more</a>
     </div>

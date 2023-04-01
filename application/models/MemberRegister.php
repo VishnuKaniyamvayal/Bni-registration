@@ -5,7 +5,9 @@ class MemberRegister extends CI_Model {
 	public function memberReg($data)
 	{
         $this->db->insert('member', $data);
-        return true;
+		$insert_id = $this->db->insert_id();
+        $query = $this->db->get_where('member', array('m_id' => $insert_id));
+        return $query->result_array();
 	}
 	public function check_region($region){
 		$this->db->select('r_id');

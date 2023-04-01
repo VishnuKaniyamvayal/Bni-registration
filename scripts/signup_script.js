@@ -21,6 +21,13 @@ $(document).ready(function () {
                     }
     
                 },
+                phone: {
+                    required: true,
+                    number:true,
+                    minlength:10,
+                    maxlength:10
+    
+                },
                 
                 password: {
                     required: true,
@@ -44,6 +51,11 @@ $(document).ready(function () {
                 password:{
                     required:"Please Enter password",
                     minlength:"Password should contain atleast 8 characters"
+                },
+                phone:{
+                    required:"Please Enter Phone number",
+                    minlength:"Phone number should contain atleast 10 numbers",
+                    maxlength:"Phone number should contain atleast 10 numbers"
                 },
                 confirm_password:{
                     required:"Confirm your password",

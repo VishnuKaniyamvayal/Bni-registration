@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="flex flex-row space-x-8 items-center justify-between px-[10px]">
                     <label for="name">Member Name</label>
                     <div class="flex flex-col mt-4 w-[300px]">
-                        <input type='text' class="form-control max-w-[300px]" id='name' name='name' />
+                        <input type='text' class="form-control max-w-[300px]" id='name' name='name' value="<?php echo $initial['users'][0]['username']?>"/>
                     </div>
                 </div>
                 <div class="flex flex-row space-x-8 items-center justify-between px-[10px] mt-1 ">
@@ -95,16 +95,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="flex flex-row space-x-8 items-center justify-between px-[10px]">
                     <label for="email">Email:</label>
                     <div class="flex flex-col mt-4 w-[300px]">
-                        <input type='text' class="form-control max-w-[300px]" id='email' name='email' />
+                        <input type='text' class="form-control max-w-[300px]" id='email' name='email' value="<?php echo $initial['users'][0]['email']?>"/>
                     </div>
                 </div>
                 <div class="flex flex-row space-x-8 items-center justify-between px-[10px] ">
                     <label for="phone">Phone:</label>
                     <div class="flex flex-col mt-4 w-[300px]">
-                        <input type='text' class="form-control max-w-[300px]" id='phone' name='phone' />
+                        <input type='text' class="form-control max-w-[300px]" id='phone' name='phone'value=<?php echo $initial['users'][0]['phone']?> />
                     </div>
                 </div>
             </div>
+            <input type="text" hidden name='u_id' value=<?php echo $initial['u_id']?> id='u_id'>
             <div class="flex justify-center mt-10 mb-[50px]">
                 <input type="Submit" value="Register" class="text-white bg-[#CF2030] px-[15px] py-[8px] rounded mx-auto"
                     id='reg_button'>
