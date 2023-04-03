@@ -54,7 +54,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <?php }; ?>
         <!--end of show only if user have subscrpition -->
-        <?php if($user['m_id'] == NULL ){ ?>
+        
+        <?php if(($user['m_id'] == NULL) && ($user['request_sent']) == 0 ){ ?>
             <h1 class='text-center my-4 text-xl'>YOU ARE NOT A MEMBER SUBSCRIBE TO OUR PLAN TO REGISTER IN TRAINING EVENTS</h1>
             <div class='flex flex-row justify-evenly'>
             <div class="bg-white shadow-lg rounded-lg overflow-hidden w-64">
@@ -106,7 +107,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <h1 class='text-center my-4 text-xl text-blue-500'>IF YOU HAVE ALREADY BOUGHT SUBSCRIPTION WAIT TILL THE ADMIN RESPONDS...</h1>
         <?php }; ?>
+
+        <?php if(($user['request_sent']) == 1){ ?>
+        <div class="max-w-sm mx-auto bg-white rounded-md shadow-md overflow-hidden">
+            <div class="px-4 py-2 bg-red-500 text-white">
+                <h2 class="font-bold text-lg text-center">Message</h2>
+            </div>
+            <div class="px-4 py-2">
+                <p class="text-red-500 font-bold">Your request has been sent. Please wait for confirmation from the admin.</p>
+             </div>
+        </div>
+
+        <?php }; ?>
+    
     </div>
+
 </body>
 
 </html>
